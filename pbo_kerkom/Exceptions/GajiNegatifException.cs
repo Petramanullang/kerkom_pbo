@@ -4,7 +4,11 @@ using System.Text;
 
 namespace pbo_kerkom.Exceptions
 {
-    internal class GajiNegatifException
-    {
-    }
+	public class GajiNegatifException : Exception
+	{
+		public GajiNegatifException()
+			: base("Gaji tidak boleh bernilai negatif.")
+		{
+		}
+	}
 }
