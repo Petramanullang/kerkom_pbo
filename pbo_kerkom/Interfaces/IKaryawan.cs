@@ -4,7 +4,9 @@ using System.Text;
 
 namespace pbo_kerkom.Interfaces
 {
-    internal class Ikaryawan
+    public interface IKaryawan
     {
+        double hitungGaji();
     }
+
 }

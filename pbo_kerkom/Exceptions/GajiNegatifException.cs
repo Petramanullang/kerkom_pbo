@@ -4,7 +4,8 @@ using System.Text;
 
 namespace pbo_kerkom.Exceptions
 {
-    internal class GajiNegatifException
+    internal class GajiNegatifException : Exception
     {
+        public GajiNegatifException(string message) : base(message) { }
     }
 }
