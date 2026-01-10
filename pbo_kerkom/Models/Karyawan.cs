@@ -1,30 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using pbo_kerkom.Enums;
+using pbo_kerkom.Interfaces;
 
 namespace pbo_kerkom.Models
 {
-    public abstract class Karyawan : IKaryawan
-    {
-        public int Id { get; set; }
-        public string Nama { get; set; }
-        public Jabatan Jabatan { get; set; }
+	public abstract class Karyawan : IKaryawan
+	{
+		public string Nama { get; set; }
 
-        protected Karyawan(int id, string nama, Jabatan jabatan)
-        {
-            Id = id;
-            Nama = nama;
-            Jabatan = jabatan;
-        }
+		public Jabatan Jabatan { get; set; }
 
-        public virtual double HitungGaji()
-        {
-            return Jabatan.TotalGaji();
-        }
-
-        public virtual string GetInfo()
-        {
-            return $"ID: {Id}, Nama: {Nama}, Jabatan: {Jabatan.NamaJabatan}, Gaji: {HitungGaji()}";
-        }
-    }
+		public abstract double HitungGaji();
+	}
 }
+
